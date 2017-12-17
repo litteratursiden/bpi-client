@@ -1,10 +1,10 @@
 <?php
 
-use Bpi\Sdk\Authorization;
+namespace Bpi\Sdk;
+
 use Bpi\Sdk\Exception\SDKException;
 use Bpi\Sdk\Item\BaseItem;
 use Bpi\Sdk\Item\Node;
-use Bpi\Sdk\NodeList;
 use GuzzleHttp\Client as GuzzleHttpClient;
 use GuzzleHttp\Exception\ClientException as GuzzleClientException;
 

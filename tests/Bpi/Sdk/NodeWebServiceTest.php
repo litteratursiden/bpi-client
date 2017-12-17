@@ -1,8 +1,6 @@
 <?php
 
-namespace Bpi\Sdk\Tests\WebService;
-
-require_once __DIR__ . '/WebServiceTestCase.php';
+namespace Bpi\Sdk;
 
 class NodeWebServiceTest extends WebServiceTestCase
 {

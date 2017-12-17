@@ -1,13 +1,11 @@
 <?php
 
-namespace Bpi\Sdk\Tests\WebService;
-
-require_once __DIR__ . '/../../Bpi/Sdk/Bpi.php';
+namespace Bpi\Sdk;
 
 abstract class WebServiceTestCase extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var \Bpi
+     * @var \Bpi\Sdk\Bpi
      */
     protected $client;
 
@@ -17,10 +15,10 @@ abstract class WebServiceTestCase extends \PHPUnit_Framework_TestCase
     {
         if (!$this->client) {
             $environment = [
-                'BPI_WS_ENDPOINT' => null,
-                'BPI_WS_AGENCY_ID' => null,
-                'BPI_WS_API_KEY' => null,
-                'BPI_WS_SECRET_KEY' => null,
+                'BPI_WS_ENDPOINT' => '',
+                'BPI_WS_AGENCY_ID' => '',
+                'BPI_WS_API_KEY' => '',
+                'BPI_WS_SECRET_KEY' => '',
             ];
             foreach ($environment as $name => &$value) {
                 $value = getenv($name);
@@ -31,7 +29,7 @@ abstract class WebServiceTestCase extends \PHPUnit_Framework_TestCase
 
             $this->agencyId = $environment['BPI_WS_AGENCY_ID'];
 
-            $this->client = new \Bpi($environment['BPI_WS_ENDPOINT'], $environment['BPI_WS_AGENCY_ID'], $environment['BPI_WS_API_KEY'], $environment['BPI_WS_SECRET_KEY']);
+            $this->client = new Bpi($environment['BPI_WS_ENDPOINT'], $environment['BPI_WS_AGENCY_ID'], $environment['BPI_WS_API_KEY'], $environment['BPI_WS_SECRET_KEY']);
         }
     }
 }
