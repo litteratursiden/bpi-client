@@ -9,22 +9,19 @@
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
-         bootstrap="vendor/autoload.php"
+         bootstrap="tests/bootstrap.php"
 >
     <testsuites>
         <testsuite name="BPI SDK Test Suite">
-            <directory>./Tests/</directory>
+            <directory>tests/*</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory>./</directory>
-            <exclude>
-                <directory>./Resources</directory>
-                <directory>./Tests</directory>
-                <directory>./vendor</directory>
-            </exclude>
+            <blacklist>
+                <directory>vendor</directory>
+            </blacklist>
         </whitelist>
     </filter>
 </phpunit>

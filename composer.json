@@ -19,7 +19,7 @@
         "guzzlehttp/guzzle": "^6.2"
     },
     "autoload": {
-        "psr-0": { "Bpi\\Sdk": "." }
+        "psr-0": { "Bpi\\Sdk": ["src/", "tests/"] }
     },
     "require-dev": {
         "phpunit/phpunit": "^5.7"
