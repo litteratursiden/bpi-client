@@ -15,10 +15,10 @@ abstract class WebServiceTestCase extends \PHPUnit_Framework_TestCase
     {
         if (!$this->client) {
             $environment = [
-                'BPI_WS_ENDPOINT' => '',
-                'BPI_WS_AGENCY_ID' => '',
-                'BPI_WS_API_KEY' => '',
-                'BPI_WS_SECRET_KEY' => '',
+                'BPI_WS_ENDPOINT' => null,
+                'BPI_WS_AGENCY_ID' => null,
+                'BPI_WS_API_KEY' => null,
+                'BPI_WS_SECRET_KEY' => null,
             ];
             foreach ($environment as $name => &$value) {
                 $value = getenv($name);
