@@ -1,5 +1,7 @@
 <?php
 
+namespace Bpi\Sdk;
+
 use Bpi\Sdk\Authorization;
 use Bpi\Sdk\Exception\SDKException;
 use Bpi\Sdk\Item\BaseItem;
